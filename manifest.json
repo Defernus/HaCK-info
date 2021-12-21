@@ -1,0 +1,25 @@
+{
+  "name": "HaCK info",
+  "version": "1.0.0",
+  "manifest_version": 2,
+  "description": "HaCK info",
+  "icons": {
+      "512": "logo512.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://*/*", "http://*/"],
+      "js": ["main.js"],
+      "run_at": "document_start"
+    }
+  ],
+  "permissions": [
+    "activeTab",
+    "http://*/",
+    "https://*/*"
+  ],
+  "browser_action": {
+      "default_icon": "logo512.png",
+      "default_popup": "popup.html"
+  }
+}
