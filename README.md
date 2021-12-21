@@ -2,11 +2,11 @@
 
 Chrome extension to view site information in console
 
-## TL;DR install
+## TL;DR install:
 
 Go to [chrome://extensions/](chrome://extensions/) -> click 'Load unpacked' button -> select the root folder of the project
 
-## Using
+## How to use:
 
 Extension creates global 'HaCK' variable with all info
 ```typescript
@@ -22,3 +22,14 @@ const HaCK: {
   }[];
 };
 ```
+
+## Progress
+
+- [x] Store webrtc connections
+- [x] Store shaders sources
+- [ ] Store all streams
+  - [x] camera streams
+  - [ ] remote streams
+  - [ ] display media stream
+- [ ] Viewing tool (view stream content)
+- [ ] Add tools to track different events on page (e.g. trigger a custom function when the site accesses the camera)
