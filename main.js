@@ -11,27 +11,6 @@ const initExtention = () => {
       navigator.mediaDevices.getUserMedia = async (constraints) => {
         const result = await originalGetUserMedia.call(navigator.mediaDevices, constraints);
 
-        // const fakeCameraCanvas = document.createElement("canvas");
-        // fakeCameraCanvas.style = "display: none";
-        // document.body.appendChild(fakeCameraCanvas);
-        // fakeCameraCanvas.width = 1920;
-        // fakeCameraCanvas.height = 1080;
-        // const ctx = fakeCameraCanvas.getContext("2d");
-        // let x = 0;
-        // const render = () => {
-        //   ++x;
-        //   if (x >= 1920) {
-        //     x = 0;
-        //   }
-        //   ctx.fillStyle = '#ff0000ff';
-        //   ctx.fillRect(0, 0, 1920, 1080);
-        //   ctx.fillStyle = '#00ff00ff';
-        //   ctx.fillRect(x, 0, 1920, 1080);
-        //   requestAnimationFrame(render);
-        // };
-        // render();
-        // const stream = fakeCameraCanvas.captureStream();
-        
         window.HaCK.streams.push(result);
         return result;
       };
@@ -41,17 +20,11 @@ const initExtention = () => {
 
       const OriginalRTC = RTCPeerConnection
       RTCPeerConnection = function (...args) {
-        console.log("creating RTCPeerConnection with args:", args);
         const wrbRtc = new.target ? new OriginalRTC(...args) : OriginalRTC(...args);
 
         window.HaCK.connections.push(wrbRtc);
-        // let methods = {};
-        // Object.defineProperty(wrbRtc, "ontrack", {
-        //   set: () => {
-        //     methods.
-        //   }
-        // });
 
+        console.log("creating RTCPeerConnection with args:", wrbRtc);
         return wrbRtc;
       }
       RTCPeerConnection.prototype = OriginalRTC.prototype;
