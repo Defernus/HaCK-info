@@ -31,5 +31,5 @@ const HaCK: {
   - [x] camera streams
   - [ ] remote streams
   - [ ] display media stream
-- [ ] Viewing tool (view stream content)
+- [ ] Viewer tool (view stream content)
 - [ ] Add tools to track different events on page (e.g. trigger a custom function when the site accesses the camera)

@@ -1,0 +1,28 @@
+{
+  "name": "hack",
+  "version": "1.0.0",
+  "description": "Chrome extension to view site information in console",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Defernus/HaCK-info.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Defernus/HaCK-info/issues"
+  },
+  "homepage": "https://github.com/Defernus/HaCK-info#readme",
+  "dependencies": {
+    "@babel/runtime": "^7.16.5",
+    "fs-extra": "^10.0.0",
+    "webpack": "^5.65.0"
+  },
+  "devDependencies": {
+    "webpack-cli": "^4.9.1",
+    "webpack-merge-and-include-globally": "^2.3.4"
+  }
+}
