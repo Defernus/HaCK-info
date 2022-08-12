@@ -4,7 +4,8 @@ Chrome extension to view site information in console
 
 ## TL;DR install:
 
-Go to [chrome://extensions/](chrome://extensions/) -> click 'Load unpacked' button -> select the root folder of the project
+install dependencies: `npm i`. Then build extension: `npm run build`.  
+Go to [chrome://extensions/](chrome://extensions/) -> click 'Load unpacked' button -> select `dist/result` folder in the project
 
 ## How to use:
 
