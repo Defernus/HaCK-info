@@ -10,7 +10,7 @@ Go to [chrome://extensions/](chrome://extensions/) -> click 'Load unpacked' butt
 
 Extension creates global 'HaCK' variable with all info
 ```typescript
-const HaCK: {
+type HaCK = {
   connections: RTCPeerConnection[]; // all webrtc connections
   streams: MediaStream[]; // all requested camera streams
   glCanvases: {
